@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101126" />
+  <title>Star Catcher — a tiny cosmic game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sky" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Star Catcher home"><span class="brand-icon">✦</span> tiny arcade</a>
+      <span class="edition"><span class="live-dot"></span> COSMIC EDITION</span>
+    </header>
+
+    <section class="intro">
+      <div class="eyebrow"><span>✧</span> A LITTLE GAME FOR YOUR BREAK</div>
+      <h1>Star <span>Catcher</span></h1>
+      <p class="subhead">The night sky is full of wishes.<br>Catch as many as you can before they disappear.</p>
+    </section>
+
+    <section class="game-shell" aria-label="Star Catcher game">
+      <div class="hud">
+        <div class="stat"><span class="stat-label">YOUR SCORE</span><strong id="score">00</strong></div>
+        <div class="timer-wrap"><div class="timer-ring"><span id="timer">30</span></div><span class="stat-label">SECONDS</span></div>
+        <div class="stat best"><span class="stat-label">PERSONAL BEST</span><strong id="best">00 <span class="best-star">✦</span></strong></div>
+      </div>
+      <div class="arena" id="arena" aria-label="Play area">
+        <div class="arena-hint" id="hint"><span class="hint-star">✦</span><strong>Your little universe awaits</strong><span>Press start, then tap the stars!</span></div>
+        <div class="countdown" id="countdown" aria-live="assertive"></div>
+      </div>
+      <div class="game-footer">
+        <span class="tip"><span>↗</span> Stars are quick—stay sharp!</span>
+        <button class="start-btn" id="startBtn"><span>▶</span> <span id="startLabel">Start playing</span></button>
+        <span class="controls">TAP OR CLICK TO CATCH</span>
+      </div>
+    </section>
+    <footer>Made for curious minds <span>✦</span> No downloads, just a little magic.</footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
